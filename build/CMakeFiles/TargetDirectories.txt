@@ -1,0 +1,2 @@
+/home/jdenoce/cs480/cs480DeNoce/computer-graphics/PA1/build/CMakeFiles/Tutorial.dir
+/home/jdenoce/cs480/cs480DeNoce/computer-graphics/PA1/build/CMakeFiles/Tutorial_SUCCESSFUL.dir

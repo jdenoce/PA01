@@ -1,0 +1,36 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/graphics_headers.h
+iostream
+-
+OpenGL/gl3.h
+-
+OpenGL/GLU.h
+-
+GL/glew.h
+-
+glm/glm.hpp
+-
+glm/gtc/matrix_transform.hpp
+-
+glm/gtc/type_ptr.hpp
+-
+glm/gtx/rotate_vector.hpp
+-
+
+../include/object.h
+vector
+-
+graphics_headers.h
+../include/graphics_headers.h
+
+/home/jdenoce/cs480/cs480DeNoce/computer-graphics/PA1/src/object.cpp
+object.h
+/home/jdenoce/cs480/cs480DeNoce/computer-graphics/PA1/src/object.h
+
