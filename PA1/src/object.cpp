@@ -80,10 +80,12 @@ Object::~Object()
 void Object::Update(unsigned int dt)
 {
   angle += dt * M_PI/1000;
-  glm::mat4 rot = glm::rotate(glm::mat4(1.0f), (angle), glm::vec3(0.0, 1.0, 0.0));
-
-  glm::mat4 trans = glm::translate(glm::mat4(1.0f), glm::vec3(3.5, 0.0, 0.0));
-  model = rot * trans;
+  
+  glm::mat4 rotation_matrix = glm::rotate(glm::mat4(1.0f), (angle), glm::vec3(0.0, 1.0, 0.0));
+  glm::mat4 translation_matrix = glm::translate(glm::mat4(1.0f), glm::vec3(4.5*sin(angle/3), 0.0, 4.5*cos(angle/3)));
+  
+  model = translation_matrix * rotation_matrix;
+  
 }
 
 glm::mat4 Object::GetModel()
