@@ -73,14 +73,6 @@ bool Shader::AddShader(GLenum ShaderType)
              frag_color = vec4(color.rgb, 1.0); \
           } \
 	";
-	/*std::string temp;
-	std::ifstream shad_file("GL_fragment_shader");
-	while(!shad_file.eof())
-	{
-		getline(shad_file, temp);
-		s.append(temp);
-	}
-	std::cout<<s<<"here"<<std::endl;*/
   }
 
   GLuint ShaderObj = glCreateShader(ShaderType);

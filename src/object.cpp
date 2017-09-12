@@ -69,6 +69,11 @@ Object::Object()
   glGenBuffers(1, &IB);
   glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, IB);
   glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(unsigned int) * Indices.size(), &Indices[0], GL_STATIC_DRAW);
+
+  //modified section
+  rotation_direction=true;
+  direction_direction=true;
+  direction = 0.0f;
 }
 
 Object::~Object()
@@ -80,21 +85,25 @@ Object::~Object()
 void Object::Update(unsigned int dt)
 {
   angle += dt * M_PI/1000;
+  direction += dt * M_PI/1000;
 
-
+ //rotation
   glm::mat4 rotation_matrix = glm::rotate(glm::mat4(1.0f), (angle), glm::vec3(0.0, 1.0, 0.0));
-  glm::mat4 translation_matrix = glm::translate(glm::mat4(1.0f), glm::vec3(4.5*sin(angle/3), 0.0, 4.5*cos(angle/3)));
+  if(!rotation_direction)
+  {
+    angle -= 2 * dt * M_PI/1000;
+    rotation_matrix = glm::rotate(glm::mat4(1.0f), (angle), glm::vec3(0.0, 1.0, 0.0));
+  }
+
+//direction
+  glm::mat4 translation_matrix = glm::translate(glm::mat4(1.0f), glm::vec3(4.5*sin(direction/3), 0.0, 4.5*cos(direction/3)));
+  if(!direction_direction)
+  {
+    direction -= 2 * dt * M_PI/1000;
+    translation_matrix = glm::translate(glm::mat4(1.0f), glm::vec3(4.5*sin(direction/3), 0.0, 4.5*cos(direction/3)));
+  }
   
-
   model = translation_matrix * rotation_matrix;
-
-
-//std::cout<<angle<<std::endl;
-  //glm::mat4 rot = glm::rotate(glm::mat4(1.0f), (angle), glm::vec3(0.0, 1.0, 0.0));
-
- // glm::mat4 trans = glm::translate(glm::mat4(1.0f), glm::vec3(3.5, 0.0, 0.0));
- // model = rot * trans;
-
   
 }
 
@@ -119,4 +128,47 @@ void Object::Render()
   glDisableVertexAttribArray(0);
   glDisableVertexAttribArray(1);
 }
+
+
+//modified section
+void Object::reverse_rotation()
+{
+  if(rotation_direction==true)
+  {
+    rotation_direction=false;
+  }
+  else
+  {
+    rotation_direction=true;
+  }
+}
+
+void Object::reverse_cube_direction()
+{
+  if(direction_direction==true)
+  {
+    direction_direction=false;
+  }
+  else
+  {
+    direction_direction=true;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

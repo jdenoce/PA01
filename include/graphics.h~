@@ -18,7 +18,6 @@ class Graphics
     void Update(unsigned int dt);
     void Render();
     //modified section
-    void change_direction();
     void change_rotation();
 
   private:

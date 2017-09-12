@@ -16,7 +16,6 @@ class Object
 
     //modified section
     void reverse_rotation();
-    void reverse_cube_direction();
 
   private:
     glm::mat4 model;

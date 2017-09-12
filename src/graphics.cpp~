@@ -179,11 +179,6 @@ void Graphics::change_rotation()
   m_cube->reverse_rotation();
 }
 
-void Graphics::change_direction()
-{
-  m_cube->reverse_cube_direction();
-}
-
 
 
 

@@ -91,10 +91,6 @@ void Engine::Keyboard()
     {
       m_graphics->change_rotation();
     }
-    if (m_event.key.keysym.sym == SDLK_t)
-    {
-      m_graphics->change_direction();
-    }
     if (m_event.key.keysym.sym == SDLK_ESCAPE)
     {
       m_running = false;
