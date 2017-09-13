@@ -19,8 +19,6 @@ class Engine
     void Keyboard();
     unsigned int getDT();
     long long GetCurrentTimeMillis();
-    //modified section
-    void myMouseFunc(int button, int state, int x, int y);
   
   private:
     // Window related variables
@@ -35,9 +33,6 @@ class Engine
     unsigned int m_DT;
     long long m_currentTimeMillis;
     bool m_running;
-
-    //modified section
-    bool pressed;
 };
 
 #endif // ENGINE_H
