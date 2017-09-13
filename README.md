@@ -7,7 +7,7 @@ t - reverses direction the cube is moving in a circle
 mouse click - reverses direction the cube is moving in a circle
 
 # Dependencies, Building, and Running
-
+I made mine using cmake. From the build directory you can start the program with the execuitible ./Tutorial
 
 
 ## Dependency Instructions
