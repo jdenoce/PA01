@@ -1,7 +1,9 @@
 <<<<<<< HEAD
 ### PA2: Controls
-r - reverses direction of rotation about the cube's y-axis
+r - reverses direction of rotation about the cube's y-axis 
+
 t - reverses direction the cube is moving in a circle
+
 mouse click - reverses direction the cube is moving in a circle
 
 # Dependencies, Building, and Running
