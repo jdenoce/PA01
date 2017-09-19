@@ -1,5 +1,8 @@
 <<<<<<< HEAD
-### PA2: Controls
+### PA3: Mini Cube
+
+Controls:
+
 r - reverses direction of rotation about the cube's y-axis 
 
 t - reverses direction the cube is moving in a circle
