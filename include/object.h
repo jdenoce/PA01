@@ -11,6 +11,8 @@ class Object
     ~Object();
     void Update(unsigned int dt);
     void Render();
+    //modified section
+    void Update_smallcube(unsigned int dt, glm::mat4 center);
 
     glm::mat4 GetModel();
 

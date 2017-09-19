@@ -46,6 +46,7 @@ bool Graphics::Initialize(int width, int height)
 
   // Create the object
   m_cube = new Object();
+  small_cube = new Object();
 
   // Set up the shaders
   m_shader = new Shader();
@@ -112,6 +113,7 @@ void Graphics::Update(unsigned int dt)
 {
   // Update the object
   m_cube->Update(dt);
+  small_cube->Update_smallcube(dt, m_cube->GetModel());
 }
 
 void Graphics::Render()
@@ -130,6 +132,10 @@ void Graphics::Render()
   // Render the object
   glUniformMatrix4fv(m_modelMatrix, 1, GL_FALSE, glm::value_ptr(m_cube->GetModel()));
   m_cube->Render();
+  //modified section
+  glUniformMatrix4fv(m_modelMatrix, 1, GL_FALSE, glm::value_ptr(small_cube->GetModel()));
+  small_cube->Render();
+
 
   // Get any errors from OpenGL
   auto error = glGetError();

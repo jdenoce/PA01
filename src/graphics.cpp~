@@ -46,6 +46,7 @@ bool Graphics::Initialize(int width, int height)
 
   // Create the object
   m_cube = new Object();
+  small_cube = new Object();
 
   // Set up the shaders
   m_shader = new Shader();
@@ -112,6 +113,7 @@ void Graphics::Update(unsigned int dt)
 {
   // Update the object
   m_cube->Update(dt);
+  small_cube->Update_smallcube(dt, m_cube->GetModel());
 }
 
 void Graphics::Render()
@@ -177,6 +179,11 @@ std::string Graphics::ErrorString(GLenum error)
 void Graphics::change_rotation()
 {
   m_cube->reverse_rotation();
+}
+
+void Graphics::change_direction()
+{
+  m_cube->reverse_cube_direction();
 }
 
 

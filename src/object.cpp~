@@ -112,6 +112,24 @@ glm::mat4 Object::GetModel()
   return model;
 }
 
+void Object::Update_smallcube(unsigned int dt, glm::mat4 center)
+{
+  angle += dt * M_PI/1000;
+  direction += dt * M_PI/1000;
+//need to scale size down, then translate to its position
+//scaling
+  glm::mat4 scaling_matrix = glm::scale(glm::mat4(1.0f), glm::vec3(0.4f));
+
+//rotation
+  glm::mat4 rotation_matrix = glm::rotate(glm::mat4(1.0f), (angle), glm::vec3(0.0, 1.0, 0.0));
+
+  model = scaling_matrix * rotation_matrix;
+  model[3]= glm::vec4(center[3][0]+ 3 * sin(direction), center[3][1], center[3][2] + 3 * cos(direction), center[3][3]);
+
+  //glm::mat4 translation_matrix = glm::translate(center, glm::vec3(2*sin(direction/2), 2*cos(direction/2), 0.0));
+  
+}
+
 void Object::Render()
 {
   glEnableVertexAttribArray(0);
@@ -143,8 +161,17 @@ void Object::reverse_rotation()
   }
 }
 
-
-
+void Object::reverse_cube_direction()
+{
+  if(direction_direction==true)
+  {
+    direction_direction=false;
+  }
+  else
+  {
+    direction_direction=true;
+  }
+}
 
 
 
