@@ -1,6 +1,8 @@
 <<<<<<< HEAD
 ### PA3: Mini Cube
 
+changes made to create mini cube object rotating around big cube are in the src folder. 
+
 Controls:
 
 r - reverses direction of rotation about the cube's y-axis 
