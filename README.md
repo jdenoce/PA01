@@ -1,7 +1,7 @@
 <<<<<<< HEAD
 ### PA3: Mini Cube
 
-changes made to create mini cube object rotating around big cube are in the src folder. 
+Changes made to create mini cube object rotating around big cube are in the src and include folder. Changes made for this file are marked Mini Cube. 
 
 Controls:
 
