@@ -1,17 +1,11 @@
 <<<<<<< HEAD
-### PA3: Mini Cube
+### PA4: Object Loader
 
-The files above are all for PA3.
+The files above are all for PA4.
 
-Changes made to create mini cube object rotating around big cube are in the src and include folder. Changes made for this project are marked Mini Cube. 
+Changes made to load in blender .obj file and remove object moving functionality are marked by "Porject 4".
 
-Controls:
-
-r - reverses direction of rotation about the cube's y-axis 
-
-t - reverses direction the cube is moving in a circle
-
-mouse click - reverses direction the cube is moving in a circle
+Image will render a red platform with yellow walls.
 
 # Dependencies, Building, and Running
 I made mine using cmake. From the build directory you can start the program with the execuitible ./Tutorial
