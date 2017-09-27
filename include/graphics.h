@@ -17,9 +17,7 @@ class Graphics
     bool Initialize(int width, int height);
     void Update(unsigned int dt);
     void Render();
-    //modified section
-    void change_direction();
-    void change_rotation();
+
 
   private:
     std::string ErrorString(GLenum error);
@@ -32,8 +30,7 @@ class Graphics
     GLint m_modelMatrix;
 
     Object *m_cube;
-    //modified section
-    Object *small_cube;
+
 
 };
 

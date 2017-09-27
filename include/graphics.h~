@@ -32,6 +32,8 @@ class Graphics
     GLint m_modelMatrix;
 
     Object *m_cube;
+    //modified section
+    Object *small_cube;
 
 };
 

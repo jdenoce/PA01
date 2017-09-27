@@ -17,6 +17,8 @@ class Object
     glm::mat4 GetModel();
 
     //modified section
+    bool loadOBJ(const char * path);
+
     void reverse_rotation();
     void reverse_cube_direction();
 
@@ -30,6 +32,7 @@ class Object
     float angle;
 
     //modified section
+
     bool rotation_direction;
     bool direction_direction;
     float direction;

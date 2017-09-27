@@ -84,22 +84,10 @@ void Engine::Keyboard()
   else if (m_event.type == SDL_KEYDOWN)
   {
     // handle key down events here
-    if (m_event.key.keysym.sym == SDLK_r)
-    {
-      m_graphics->change_rotation();
-    }
-    if (m_event.key.keysym.sym == SDLK_t)
-    {
-      m_graphics->change_direction();
-    }
     if (m_event.key.keysym.sym == SDLK_ESCAPE)
     {
       m_running = false;
     }
-  }
-  else if (m_event.type == SDL_MOUSEBUTTONDOWN)
-  {
-    m_graphics->change_direction();
   }
 }
 
