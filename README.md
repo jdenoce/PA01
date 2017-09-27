@@ -1,5 +1,12 @@
 <<<<<<< HEAD
-### PA2: Controls
+### PA3: Mini Cube
+
+The files above are all for PA3.
+
+Changes made to create mini cube object rotating around big cube are in the src and include folder. Changes made for this project are marked Mini Cube. 
+
+Controls:
+
 r - reverses direction of rotation about the cube's y-axis 
 
 t - reverses direction the cube is moving in a circle
